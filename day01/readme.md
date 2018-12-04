@@ -10,7 +10,7 @@ if you don't use a Python dict or a hash map as it's usually called.
 
 Let me elaborate on that a bit.
 
-So to find duplicates you do need to hold a previously seen numbers somwhere,
+So to find duplicates you do need to hold a previously seen numbers somewhere,
 so you know which numbers you've seen already.
 
 There are two ways of doing this, with an array or a dictionary.
@@ -18,7 +18,7 @@ There are two ways of doing this, with an array or a dictionary.
 If you hold your numbers in an array then in each iteration you have to look
 at the entire thing number by number to compare with the one you have in the
 current iteration. Time that it takes to do this will grow rapidly.
-Benchmarking such a solition gives us these stats:
+Benchmarking such a solution gives us these stats:
 > 133584 function calls in 104.526 seconds
 
 Using a dictionary, though, will reduce the time significantly as it requires
