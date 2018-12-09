@@ -6,3 +6,5 @@ forgot to ignore the 'new line' character so my solution was off by one until
 I figured that out.
 
 #### Part two
+Brute forced it, increase in computing time is acceptable, because it's still
+linear.
