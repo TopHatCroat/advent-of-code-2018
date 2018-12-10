@@ -22,7 +22,7 @@ infinite_areas = set()
 for x in range(max_x + 1):
     for y in range(max_y + 1):
         distances = sorted([ (i, distance(x, y, *p)) for i, p in coords ], key=operator.itemgetter(1))
-        if distances[0][1] == distances[1][1] or len(distances) == 1:
+        if distances[0][1] == distances[1][1]:
             area[x][y] = '.'
         else:
             area[x][y] = distances[0][0]

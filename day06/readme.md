@@ -8,3 +8,5 @@ for that point.
 But I got too lazy to implement such a solution so I went for the slow and dumb.
 
 #### Part two
+One of the rare times the second one is easier then the first one. Most of the
+code from the first one was useless also.
