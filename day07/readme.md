@@ -8,3 +8,5 @@ algorithm. So we are learning after all, who knew it would take time...
 End result, though is a very quick and rock solid code.
 
 #### Part two
+I got stuck on this one and I can't be bothered to figure it out.
+The example works out beautifully, but with the actual input i fails.

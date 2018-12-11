@@ -31,5 +31,28 @@ graph[last.pop()] = []
 for s in steps:
     graph[s[0]] += [s[1]]
 
-result = topological_sort(graph)
-print("".join(result))
+ordered_steps = topological_sort(graph)
+
+workers = { i: ('', 0) for i in range(5) }
+time = 0
+actual_steps = ''
+total_length = len(ordered_steps)
+while total_length > len(actual_steps):
+    for i, worker in workers.items():
+        if worker[1] <= time:
+            actual_steps += worker[0]
+            if worker[0] in graph:
+                del graph[worker[0]]
+            workers[i] = ('', 0)
+
+            deps = set([i for s in graph.values() for i in s])
+            for s in ordered_steps:
+                if s not in deps:
+                    ordered_steps.remove(s)
+                    workers[i] = (s, time + 60 + ord(s) - 64)
+                    break
+
+    # print(time, workers)
+    time += 1
+
+print(time - 1)
